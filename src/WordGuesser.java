@@ -67,8 +67,6 @@ public class WordGuesser {
                 continue;
             }
 
-            int correctPos = 0;
-            int correctLetters = 0;
 
             // process input
 
@@ -78,7 +76,6 @@ public class WordGuesser {
             //First Loop: Check input word for position
             for (int i = 0; i < secretWord.length(); i++) {
                 if (secretWord.charAt(i) == guess.charAt(i)) {
-                    correctPos++;
                     guessed[i] = true;
                     System.out.println("Correct letter: " + guess.charAt(i) + " (and position: " + (i + 1) + ")");
                 }
@@ -89,7 +86,6 @@ public class WordGuesser {
                 if (secretWord.contains(String.valueOf(guess.charAt(i))) && secretWord.charAt(i) != guess.charAt(i)) {
                     for (int j = 0; j < secretWord.length(); j++) {
                         if (!guessed[j] && secretWord.charAt(j) == guess.charAt(i)) {
-                            correctLetters++;
                             guessed[j] = true;
                             System.out.println("Correct letter: " + guess.charAt(i) + " Wrong position");
                             break;
