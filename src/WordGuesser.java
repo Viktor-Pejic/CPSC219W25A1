@@ -73,7 +73,6 @@ public class WordGuesser {
             //guessed list keeps track of the correct letters in their proper position
             boolean[] guessed = new boolean[secretWord.length()];
 
-
             //First Loop: Check input word for position
             for (int i = 0; i < secretWord.length(); i++) {
                 if (secretWord.charAt(i) == guess.charAt(i)) {
